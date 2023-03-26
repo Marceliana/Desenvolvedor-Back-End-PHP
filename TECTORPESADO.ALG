@@ -1,4 +1,6 @@
-Algoritmo "tectorPesado"
+Algoritmo "DetectorPesado"
+// Disciplina   : [Linguagem e Lógica de Programação] 
+// Professor   : Antonio Carlos Nicolodi 
 
 Var
    I: Inteiro
