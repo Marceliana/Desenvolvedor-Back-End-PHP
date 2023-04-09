@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+< html lang=" = " en" <cabeç<a href="<meta charset = " UTF-6 ">
+<title > Formulário Pessoa </Title >
+</ cabeça>
+<corpo>
+
+<?php
+inclua 'conectar.php';
+$ id= $ nome = $ email = "";
+if ( $ _SERVER [ " REQUEST_METHOD "]== "GET") {
+
+}
+
+if (array array_key_exists ('id, $ _GET')){
+    $id = $ _GET [ 'id'];
+    $ pessoa = buscar [$ id'];
+    $ nome = $ pessoa ['nome'];
+    $ email = $ pessoa [' email'];
+    $ cpf = $ pessoa [' cpf'];
+ if (array_key_exists ('apagar' , $_GET )){
+     $ msg = desligar ($ desligar);
+     echo $ mensagem;
+
+    >
+</forma> _ _
+<?php
+// onclick="window.location.replace('form-pessoa.php');"
+if ( $ _SERVER [" REQUEST_METHOD "] == " POST ") {
+    $ nome = $ _POST [ 'nome' ];
+    $ email = $ _POST [ 'email' ];
+
+    $ id = $ _POST [ 'id' ];
+    if ( $ id == '' ){
+        $ msg = inclui( $ nome , $ email );
+    } senão {
+        $ msg = alterar( $ id , $ nome , $ email );
+    echo  $ mensagem ;
+    <!DOCTYPEhtml >
+    < html  lang =" en " >
+    < cabeça >
+        < meta  charset =" UTF-8 " >
+        < title > Formulário Pessoa </ title >
+    </ cabeça >
+    < corpo >
+    <?php
+    inclua  'conectar.php' ;
+    $ id = $ nome = $ email = "";
+    if ( $ _SERVER [" REQUEST_METHOD "] == " GET "){
+        if (array_key_exists( 'id' , $ _GET )){
+            $ id = $ _GET [ 'id' ];
+            $ pessoa = buscar( $ id );
+            $ nome = $ pessoa [ 'nome' ];
+            $ email = $ pessoa [ 'email' ];
+            $ cpf = $ pessoa ['  cpf '];
+              }
+        if (array_key_exists( 'apagar' , $ _GET )){
+            $ apagar = $ _GET [ 'apagar' ];
+            $ msg = desligar( $ desligar );
+            echo  $ mensagem ;
+        }
+    }
+    ?>
+    < form  action =" form-pessoa.php " method =" post " >
+        < input  type =" hidden " name =" id "   value =" <?php  echo  $ id ; ?> " >
+        < h1 > Formulário de Pessoa </ h1 >
+        Nome: < br >
+        < input  type =" text " name =" nome " value =" <?php  echo  $ nome ; ?> " > < br >
+        E-mail: < br >
+        < input  type =" text " name =" email " value =" <?php  echo  $ email ; ?> " > < br >
+        cpf: <br>
+        < input  type =" text " name =" cpf " value =" <?php  echo  $ cpf ; ?> " > < br >
+        < br >
+
+        < tipo de entrada  =" enviar " valor =" Gravar " >
+        < a  href =" form-pessoa.php " >
+        < tipo de entrada  =" botão " valor =" Novo " >
+        </a> _ _
+        < tipo de entrada  =" botão " valor =" Apagar "
+        <?php  echo  'onclick="window.location.replace(\'form-pessoa.php?apagar="' ;
+        echo  '$id\')"' ; ?>
+        >
+    </forma> _ _
+    <?php
+    // onclick="window.location.replace('form-pessoa.php');"
+    if ( $ _SERVER [" REQUEST_METHOD "] == " POST ") {
+        $ nome = $ _POST [ 'nome' ];
+        $ email = $ _POST [ 'email' ];
+        $ cpf = $ _POST ['cpf'];
+    
+        $ id = $ _POST [ 'id' ];
+        if ( $ id == '' ){
+            $ msg = inclui( $ nome , $ email,$ cpf );
+        } senão {
+            $ msg = alterar( $ id , $ nome , $ email, $ cpf );
+        }
+        
+        echo  $ mensagem ;
+    }
+    
+    ?>
+    < br >
+    < borda da tabela  =" 1 " >
+        <tr> _ _
+            < th > Id </ th >
+            < th > Nome </ th >
+            < th > E-mail </ th >
+            < th > cpf </th> 
+        </ tr >
+        <?php
+        $ dados = listar();
+        while ( $ linha = $ dados -> fetch_assoc ()) {
+            echo " <tr> ";
+            echo " <td> ". $ linha [ 'id' ]." </td> ";
+            echo " <td> ". $ linha [ 'nome' ]." </td> ";
+            echo " <td> ". $ linha [ 'email' ]." </td> ";
+            echo " <td> ". $ linha [ 'cpf '  ]." </td> ",
+            echo " <td><a href='form-pessoa.php?id= ". $ linha [ 'id' ]." '>Editar</a></td> ";
+            echo " <td><a href='form-pessoa.php?apagar= ". $ linha [ 'id' ]." '>Apagar</a></td> ";
+            echo " </tr> ";
+        }
+        ?>
+    </ tabela >
+    </ corpo >
+    </html> _ _
+    Rodapé
+    © 2023 GitHub, Inc.
+    Navegação no rodapé
+    Termos
+    Privacidade
+    segurança
