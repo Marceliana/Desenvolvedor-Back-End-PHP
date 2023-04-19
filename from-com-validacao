@@ -1,0 +1,12 @@
+<DOCTYPEhtml
+<html>
+    <head>
+        <body>
+            $nome,=$email = $idade = $genero = "";
+            $ nomeErr = $emailErr = $idadeErr = $generoErr ="";
+
+            if ($_SERVER["REQUEST_METHOD"] == "POST" {
+
+
+                
+            }
