@@ -5,8 +5,8 @@ $senha = "";
 
 $hostweb = false;
         if($hostweb){
-    $id = "xxx";
-    $senha = "xxx";
+    $id = "id20602874_";
+$senha = "Xnqi\j7*(8TB^4B=";
         }
 
         $servidor ="localhost";
@@ -18,20 +18,13 @@ $hostweb = false;
      if($con->connect_error){
         die("Erro :".#con->connect_error);
      }
+	 if(str_contains($sql,"insert")({
+		 $con>query($sql);
+		 retur $con->insert_id;
+	 }
      return $con->query($sql);
 
     }
 ?>
-
-
-
-
-
-
-
-
-
-
-
 
 

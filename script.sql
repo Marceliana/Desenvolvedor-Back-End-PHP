@@ -1,13 +1,16 @@
-CRETE table enquete( pedipalpos (
+CRETE table admin(
     id int primary key auto_incremente,
-    nonme varchar(200)
-)
-
-create table resposta(
-    id int primary key auto_incremente,
-    id_enquete int not null,
-    nome varchar(200),
-    quantidade int,
-    foreign key (id_enquete) references enquete (id)
+ email varchar( 100) unique,
+ senha varchar(100),
 );
+
+create table produto(
+    id int primary key auto_incremente,
+        nome varchar(200),
+        valor float,
+        imagem varchar(200),
+);
+INSERT INTO admin(email,senha) VALUES("luiz@gmail.com",0123");
+
+ 
  
