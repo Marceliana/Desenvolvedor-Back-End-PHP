@@ -1,226 +1,39 @@
-<?php
-include('validar-acesso.php');
-include('conectar.php');
-?>
 <!DOCTYPE html>
-<html lang="en"
+<html lang="en">
 
-<cabeça>
-<meta charset="UTF-8">
-<title>Documento</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.bundle.min.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
-<style>
-a{
-	float: right;
-}
-.card{
-	float: left;
-	margin: 10px;
-	width: 300px;
-}
+    <?php include("login.php"); ?>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <h2>Login</h2>
+				</php if($msg != "") { ?>
+				<div class="alert alert-<?php echo StpMsg:?>">
+				<strong><?php echo $msg;?></strong> 
+				</div>
+				<?php } ?>				
+                    <form action="index.php" method="POST">
+                    <div class="mb-3 mt-3">
+                        <label for="email" class="form-label">Email:</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="senha" class="form-label">Senha:</label>
+                        <input type="password" class="form-control" id="senha" placeholder="Enter com a senha" name="senha" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Acessar</button>
+                    <a href="criar-conta.php">Criar Conta</a>
+                </form>
+            </div>
+        </div>
+    </div>
 
-h2 {
-	text-align:center;
-}
-}
+<div style="text-align:right;position:fixed;z-index:9999999;bottom:0;width:auto;right:1%;cursor:pointer;line-height:0;display:block!important"><a title="Hosted on free web hosting 000webhost.com. Host your own website for FREE." target="_blank" href="https://www.000webhost.com/?utm_source=000webhostapp&utm_campaign=000_logo&utm_medium=website&utm_content=footer_img"><img src="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png" alt="www.000webhost.com"></a></div><script>function getCookie(t){for(var e=t+"=",n=decodeURIComponent(document.cookie).split(";"),o=0;o<n.length;o++){for(var i=n[o];" "==i.charAt(0);)i=i.substring(1);if(0==i.indexOf(e))return i.substring(e.length,i.length)}return""}getCookie("hostinger")&&(document.cookie="hostinger=;expires=Thu, 01 Jan 1970 00:00:01 GMT;",location.reload());var wordpressAdminBody=document.getElementsByClassName("wp-admin")[0],notification=document.getElementsByClassName("notice notice-success is-dismissible"),hostingerLogo=document.getElementsByClassName("hlogo"),mainContent=document.getElementsByClassName("notice_content")[0];if(null!=wordpressAdminBody&&0<notification.length&&null!=mainContent){var googleFont=document.createElement("link");googleFontHref=document.createAttribute("href"),googleFontRel=document.createAttribute("rel"),googleFontHref.value="https://fonts.googleapis.com/css?family=Roboto:300,400,600,700",googleFontRel.value="stylesheet",googleFont.setAttributeNode(googleFontHref),googleFont.setAttributeNode(googleFontRel);var css="@media only screen and (max-width: 576px) {#main_content {max-width: 320px !important;} #main_content h1 {font-size: 30px !important;} #main_content h2 {font-size: 40px !important; margin: 20px 0 !important;} #main_content p {font-size: 14px !important;} #main_content .content-wrapper {text-align: center !important;}} @media only screen and (max-width: 781px) {#main_content {margin: auto; justify-content: center; max-width: 445px;}} @media only screen and (max-width: 1325px) {.web-hosting-90-off-image-wrapper {position: absolute; max-width: 95% !important;} .notice_content {justify-content: center;} .web-hosting-90-off-image {opacity: 1;}} @media only screen and (min-width: 769px) {.notice_content {justify-content: space-between;} #main_content {margin-left: 5%; max-width: 445px;} .web-hosting-90-off-image-wrapper {position: absolute; display: flex; justify-content: center; width: 50%; margin-left: 45%;}} .web-hosting-90-off-image {max-width: 90%;} .content-wrapper {min-height: 454px; display: flex; flex-direction: column; justify-content: center; z-index: 5} .notice_content {display: flex; align-items: center;} * {-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;} .upgrade_button_red_sale{box-shadow: 0 2px 4px 0 rgba(255, 69, 70, 0.2); width: 264px; border: 0; border-radius: 3px; background-color: #FF5C62 !important; padding: 15px 55px !important; font-family: 'Roboto', sans-serif; font-size: 16px; font-weight: 600; color: #ffffff;} .upgrade_button_red_sale:hover{color: #ffffff !important; background: #d10303 !important;}",style=document.createElement("style"),sheet=window.document.styleSheets[0];style.styleSheet?style.styleSheet.cssText=css:style.appendChild(document.createTextNode(css)),document.getElementsByTagName("head")[0].appendChild(style),document.getElementsByTagName("head")[0].appendChild(googleFont);var button=document.getElementsByClassName("upgrade_button_red")[0],link=button.parentElement;link.setAttribute("href","https://www.hostinger.com/hosting-starter-offer?utm_source=000webhost&utm_medium=panel&utm_campaign=000-wp"),link.innerHTML='<button class="upgrade_button_red_sale">Claim Deal</button>',(notification=notification[0]).setAttribute("style","padding-bottom: 0; padding-top: 5px; background-color: #040713; background-size: cover; background-repeat: no-repeat; color: #ffffff; border-left-color: #040713;"),notification.className="notice notice-error is-dismissible";var mainContentHolder=document.getElementById("main_content");mainContentHolder.setAttribute("style","padding: 0;"),hostingerLogo[0].remove();var h1Tag=notification.getElementsByTagName("H1")[0];h1Tag.className="000-h1",h1Tag.innerHTML="Black Friday",h1Tag.setAttribute("style",'color: white; font-family: "Roboto", sans-serif; font-size: 48px; font-weight: 700;');var h2Tag=document.createElement("H2");h2Tag.innerHTML="Up to 90% off 4-year hosting plans + free domain, SSL & DDoS protection",h2Tag.setAttribute("style",'color: white; margin: 10px 0 15px 0; font-family: "Roboto", sans-serif; font-size: 16px; font-weight: 400; line-height: 1;'),h1Tag.parentNode.insertBefore(h2Tag,h1Tag.nextSibling);var paragraph=notification.getElementsByTagName("p")[0];paragraph.innerHTML="$<span style='font-size: 80px;'>2.49</span>/mo",paragraph.setAttribute("style",'font-family: "Roboto", sans-serif; font-size: 48px; font-weight: 700; margin: 0;');var list=notification.getElementsByTagName("UL")[0];list.remove();var org_html=mainContent.innerHTML,new_html='<div class="content-wrapper">'+mainContent.innerHTML+'</div><div class="web-hosting-90-off-image-wrapper"><img class="web-hosting-90-off-image" src="https://cdn.000webhost.com/000webhost/promotions/bf-2022-bottom-banner.png"></div>';mainContent.innerHTML=new_html;var saleImage=mainContent.getElementsByClassName("web-hosting-90-off-image")[0]}</script></body>
 
-#carrinho-principal {
-	position:fixed;
-	right: 10px;
-	bottom: 10px;
-}
-
-.up,
-.down {
-	  cursor: pointer;
-}
-</style>
-
-<div class="containe mt-3">
-<h2>class="text-center">Sapato Retro Marcie </h2>
-<?php
-includ("conectar.php");
-$sql = "select * from produto";
-$resultado = conectar($sql);
-$i = 0;
-while ($linha = $resultado->fetch_assoc()) {
-	$nome = $linha['nome"];
-	$valor =$linha["valor"];
-	$imagem =$linha["imagem"];
-	$id =$linha["id"];
-	?>
-	<div class="card">
-	Iimg class="card-img-top" src="<?php echo $imagem; ?>" alt="Card image" style="width:100%">
-	<div class="card-body">
-	<h4 class="card-title"><?php echo $nome; ?></h4>
-	<p class="card-text">R$: <?php echo $valor; ?>
-	<a href="#" class="btn btnoutline- info" onelick="addItem(<?php echo $i ?>"🛒</a>
-</p>
-</div>
-<?php $i++;
-}
-?>
-
-</div>
-<a href="#" id="carrinho-principal" class="btn btn-primary btn-lg" onclick="carrinho()"
-data=bs-toggle="modal" data-bs-target="#myModal">🛒 </a>
-
-
-<div class="modal" id="myModal">
-<div class="modal-dialog modal-lg">
-<div class="modal-content">
-
-<div class="modal1--header">
-<h4 class="modal-title">Produtos para encomenda</h4>
-<button type="button" class="btn-close" data-bs-dismiss="modal">button>
-</div>
-
-<div class="modal-body" id="modal-Body">
-<table class"table">
-<thead>
-<tr>
-<th>Produto</th>
-<th class="col-1">Valor</th>
-<th class="col-1>Quantidade</th>
-</tr>
-</thead>
-<tbody id="tb-corpo">
-</tbody>
-</table>
-</div>
-
-<div class="modal-Footer">
-<button type=button" class="btn btn-sucess" onclick="enviarEncomenda()">Enviar Encomenda</Button>
-<button type=button" class="btn btn--danger" data=bs-dismiss="modal">Cancelar</button>
-</div>
-
-</div>
-</div>
-</div>
-
-<script>
-1sCarrinho = [];
-valorEncomenda = 0;
-
-function addItem(i) {
-	if (1sCarrinho[i] != true) {
-		1sCarrinho[i] != true;
-		document.getElementsByClassName("btn")[i].classList.remove("btn-outline-info");
-		document.getElementsByClassName("btn")[i].classList.add("btn-info");
-	}else {
-		if (1sCarrinho[i] != false;
-		document.getElementsByClassName("btn")[i].classList.remove("btn-outline-info");
-		document.getElementsByClassName("btn")[i].classList.add("btn-info");   
-	}
-}
-1sProduto = [];
-
-function carrinho(){
-	valorEncomenda = 0;
-	1sProduto = [];
-	for (const i in 1sCarrinho) {
-		if (1sCarrinho[i]) {
-			p = {};
-			console.log(i);
-			p.id = i;
-			p.nome = document.getElementsByClassName("card-title")[i].innerHTML;
-			P.valor= document.getElementsByClassName("card-title")[i].innerHTML;
-n = p.valor. indexOf("<");
-p.valor = p.valor.substring(3,n);
-p.valor = p.valor.replace(",",".")
-p.quantidade =1;
-console.log(p);
-1sProduto.push(p);
-		}
-	}
-	
-	tbCorpo = "";
-	for (const i in 1sProduto) {
-		p= 1sProduto[i];
-		p.valorUnitario = p.valor;
-		tbCorpo+=
-		<tr>
-		<td>${p.nome}</td>
-		<td class="valor>${p.valor}</td>
-		<td>
-		<span class="up" onclick="mudarQt($(i),1)">seta para cima</spam>
-	<span class="qt>${p.quantidade}</spam>
-	span class="down" onclick="mudarQt(${i},-1)">seta para baixo</spam>
-	</td>
-	</tr>
-	.;
-	valorEncomenda += Number(p.valor);
-	}
-	tbCorpo +=';
-	tr>
-	              <td>Valor da Encomenda</td>
-				  <td colspan="2" id="v1Encomenda">${valorEncomenda}<td>
-				  </tr>';
-	document.getElementsById("th-corpo").innerHTML = tbCorpo;
-}
-function mudarQt(i,gt) {
-console.log(i);
-console.log(qt);
-p = 1sProduto[i];
-p.quantidade += qt;
-if (p.quantidade <= 0){
-	addItem(p.id);
-	document.getElementsByTagName("tr")[i + 1].style.display = "nome";
-	p.valor = 0;
-	atualizaValorEncomenda();
-	return;
-}
-p.valor = p.quantidade * p.valorUnitario;
-document.getElementsByClassName("qt")[i].innerHTML = p.quantidade;
-document.getElementsByClassName("Valor")[i].innerHTML= p.valor;
-atualizaValorEncomenda()
-}
-function atualizaValorEncomenda() {
-	valorEncomenda= 0;
-	for (p of 1sProduto){
-		v1Encomenda!= Number(p.valor);
-	}
-	document.getElementsById("v1Encomenda").innerHTML = valorEncomenda;
-}
-
-function enviarEncomenda() {
-	fone = "5561985607460";
-	if (valorEncomenda <= 0) {
-		alert("A encomenda deve ter ao menos 1 produto.")
-		return;
-	}
-	
-	msg += 'Valor da Encomenda = ${valorEncomenda};
-	msg encodeURI(msg);
-url = 'https://api.whatsapp.com/send?phone=${fone}&text=$(msg)';
-
-window.open(url, '_blank');
-}
-</script>
-<?body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</body>
-</html>
-
-
-</div>
